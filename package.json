@@ -1,0 +1,40 @@
+{
+  "name": "liqd-unique-id",
+  "description": "Unique ID generator working across multiple cluster nodes and processes",
+  "version": "1.0.0",
+  "author": "radixxko",
+  "license": "MIT",
+  "main": "lib/unique_id.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/radixxko/liqd-unique-id.git"
+  },
+  "keywords": [
+    "unique",
+    "id",
+    "generator",
+    "liqd"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0"
+  },
+  "nyc" :
+  {
+    "include": [
+      "lib/**/*.js"
+    ],
+    "exclude": [
+      "lib/machine_id.js"
+    ]
+  }
+}
