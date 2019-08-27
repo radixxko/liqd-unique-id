@@ -4,7 +4,7 @@ const generatedIDs = new Set();
 
 const UniqueID = require('../lib/unique_id');
 
-let sessionID = new UniqueID({ unique_interval: 365 * 24 * 3600 });
+let sessionID = new UniqueID({ /*unique_interval: 365 * 24 * 3600,*/unique_interval: 60, node: true });
 
 let start = process.hrtime();
 let ids = 0;
@@ -22,7 +22,7 @@ function generate()
     process.exit();
   }
 
-  for( let i = 0; i < 256; ++i )
+  for( let i = 0; i < 2560000; ++i )
   {
     id = sessionID.get();
 
