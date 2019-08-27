@@ -22,7 +22,7 @@ function generate()
     process.exit();
   }
 
-  for( let i = 0; i < 2560000; ++i )
+  for( let i = 0; i < 256; ++i )
   {
     id = sessionID.get();
 
